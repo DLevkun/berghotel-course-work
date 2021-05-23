@@ -1,0 +1,271 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 55px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+
+h1:before {
+    content: url("img/triangle_left.png");
+    padding-right: 7px;
+}
+
+h1:after {
+    content: url("img/triangle_right.png");
+    padding-left: 7px;
+}
+
+.flex-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-wrap {
+    width: 64%;
+    height: 600px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+#btn-prev,
+#btn-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: auto;
+    left: -110px;
+    top: 45%;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#hover {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+#btn-prev:hover #hover,
+#btn-next:hover #hover {
+    opacity: 1;
+}
+
+#btn-next {
+    left: auto;
+    right: -110px;
+}
+
+.slide {
+    max-width: 920px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    transition: 0.5s;
+    background-image: url("../img/image1.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#first-slide {
+    background-image: url("../img/image1.jpg");
+}
+#second-slide {
+    background-image: url("../img/image2.jpg");
+}
+
+#third-slide {
+    background-image: url("../img/image3.jpg");
+}
+
+#fourth-slide {
+    background-image: url("../img/image4.jpg");
+}
+
+#fifth-slide {
+    background-image: url("../img/image5.jpg");
+}
+
+.slide.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    height: 90%;
+}
+
+.dots-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.dot.active {
+    background-color: #177d85;
+}
+
+.dot {
+    width: 7px;
+    height: 35px;
+    background: #888888;
+    border-radius: 2px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+div span:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1300px) {
+    .slider-wrap {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .slider-wrap {
+        height: 445px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .slider-wrap {
+        height: 400px;
+    }
+    #btn-prev img,
+    #btn-next img {
+        width: 64px;
+    }
+    #btn-prev #hover,
+    #btn-next #hover {
+        width: 68px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .slider-wrap {
+        height: 370px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider-wrap {
+        height: 295px;
+    }
+    #btn-prev img,
+    #btn-next img {
+        width: 46px;
+    }
+    #btn-prev #hover,
+    #btn-next #hover {
+        width: 50px;
+    }
+
+    #btn-prev {
+        left: -75px;
+    }
+    #btn-next {
+        right: -75px;
+    }
+
+    .dot {
+        height: 30px;
+        margin-right: 6px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .slider-wrap {
+        height: 225px;
+    }
+    #btn-prev img,
+    #btn-next img {
+        width: 37px;
+    }
+    #btn-prev #hover,
+    #btn-next #hover {
+        width: 40px;
+    }
+    .dot {
+        height: 27px;
+        width: 6px;
+        margin-right: 5px;
+    }
+    .flex-wrap {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dots-wrapper {
+        margin: 15px auto;
+    }
+    .dot {
+        height: 25px;
+        width: 5px;
+        margin-right: 4px;
+    }
+    #btn-prev {
+        left: -55px;
+    }
+    #btn-next {
+        right: -55px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .slider-wrap {
+        height: 196px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .dot {
+        height: 23px;
+        width: 4px;
+    }
+    #btn-prev img,
+    #btn-next img {
+        width: 27px;
+    }
+    #btn-prev #hover,
+    #btn-next #hover {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .dots-wrapper {
+        margin: 8px auto;
+    }
+    #btn-prev {
+        left: -42px;
+    }
+    #btn-next {
+        right: -42px;
+    }
+}
